@@ -6,7 +6,7 @@ const CountriesInfo = function (container) {
 };
 
 CountriesInfo.prototype.bindEvents = function(){
-  PubSub.subscribe('SelectView:change', (evt) =>{
+  PubSub.subscribe('Countries:country-selected', (evt) =>{
     const country = evt.detail;
     this.render(country);
   });
@@ -23,4 +23,17 @@ CountriesInfo.prototype.render = function(country) {
   const image = document.createElement('img');
   image.classList.add('flag-image');
   image.src = country.flag;
+  // language.textContent = `Name: ${country.languages.name}`;// languages is an array; need for loop
+  // const language = document.createElement('p');
+
+  this.container.innerHTML = '';
+
+  newCountryInfo.appendChild(name);
+  newCountryInfo.appendChild(region);
+  newCountryInfo.appendChild(image);
+  // newCountryInfo.appendChild(language);
+
+  this.container.appendChild(newCountryInfo);
 }
+
+module.exports = CountriesInfo;
