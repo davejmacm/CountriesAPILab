@@ -4,8 +4,8 @@
 }
 
 /* play about code for rotating earth  */
-/*
-#earth {
+
+.globe {
   width: 300px;
   height: 300px;
   background: url(http://www.roentgen-institut.ch/clientdata/CID00001/org_1/images/10043.jpg);
@@ -36,4 +36,4 @@
   to {
     background-position: 610px 0px;
   }
-} */
+}
