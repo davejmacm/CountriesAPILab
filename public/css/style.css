@@ -1,3 +1,8 @@
+body {
+  background-color: #111;
+  color: white;
+}
+
 .flag-image {
   height: 15rem;
   width:20rem;
@@ -11,7 +16,7 @@
   background: url(http://www.roentgen-institut.ch/clientdata/CID00001/org_1/images/10043.jpg);
   border-radius: 50%;
   background-size: 610px;
-  box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 8px 30px 74px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
   animation-name: rotate;
   animation-duration: 12s;
   animation-iteration-count: infinite;
