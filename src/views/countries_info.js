@@ -24,6 +24,7 @@ CountriesInfo.prototype.render = function(country) {
   image.classList.add('flag-image');
   image.src = country.flag;
   const languageList = document.createElement('ul');
+  languageList.textContent = "Languages spoken:";
   country.languages.forEach(function(language){
     const languageElement = document.createElement('li')
     languageElement.textContent = language.name;
