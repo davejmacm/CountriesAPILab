@@ -23,12 +23,13 @@ CountriesInfo.prototype.render = function(country) {
   const image = document.createElement('img');
   image.classList.add('flag-image');
   image.src = country.flag;
-  const language = document.createElement('p');
-  language.textContent = `Languages spoken: ${country.languages.forEach(function(language) {
-  console.log(language.name);
-  return language.name = language;
-})
-}`;
+  const languageList = document.createElement('ul');
+  country.languages.forEach(function(language){
+    const languageElement = document.createElement('li')
+    languageElement.textContent = language.name;
+    languageList.appendChild(languageElement);
+  });
+
 
 
   this.container.innerHTML = '';
@@ -36,7 +37,7 @@ CountriesInfo.prototype.render = function(country) {
   newCountryInfo.appendChild(name);
   newCountryInfo.appendChild(region);
   newCountryInfo.appendChild(image);
-  newCountryInfo.appendChild(language);
+  newCountryInfo.appendChild(languageList);
 
   this.container.appendChild(newCountryInfo);
 }
